@@ -14,21 +14,21 @@ CHANGES = re.sub(r":ref:`(.*?) <.*>`", r"\1", CHANGES)
 REQUIREMENTS_TEST = open(os.path.join(HERE, "requirements_test.txt")).readlines()
 REQUIREMENTS = [
     "smart_open[s3,http]",
-    "boto3>=1.7.0",
+    "boto3>=1.7.0,<2",
     # beaker needs this
-    "cryptography",
-    "distlib",
-    "paste",
-    "passlib>=1.7",
-    "pyramid>=2",
-    "pyramid_beaker",
-    "pyramid_duh",
-    "pyramid_jinja2",
-    "pyramid_rpc",
-    "pyramid_tm",
-    "requests",
-    "transaction",
-    "zope.sqlalchemy",
+    "cryptography>=40.0,<41",
+    "distlib>=0.3,<1",
+    "paste>=3.5,<4",
+    "passlib>=1.7,<2",
+    "pyramid>=2.0,<3",
+    "pyramid_beaker>=0.8,<1",
+    "pyramid_duh>=0.1,<1",
+    "pyramid_jinja2>=2.10,<3",
+    "pyramid_rpc>=0.8,<1",
+    "pyramid_tm>=2.5,<3",
+    "requests>=2.29,<3",
+    "transaction>=3.1,<4",
+    "zope.sqlalchemy>=2.0,<3",
 ]
 
 EXTRAS = {
